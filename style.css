@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    background: #ffe6f2;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    color: #ff7aa2;
+    margin-bottom: 20px;
+}
+
+input, button {
+    padding: 10px 14px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #ffb6d9;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.gallery {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.polaroid {
+    background: white;
+    padding: 15px;
+    width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+}
+
+.polaroid img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.polaroid p {
+    margin-top: 10px;
+    color: #ff7aa2;
+}
+
+.polaroid:hover {
+    transform: rotate(-2deg) scale(1.05);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}

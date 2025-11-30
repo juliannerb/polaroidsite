@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polaroid Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="title">📸 My Polaroid Gallery ✨</h1>
+
+    <input type="file" id="photoInput" accept="image/*">
+    <button onclick="addPhoto()">Add Photo 💗</button>
+
+    <div class="gallery" id="gallery"></div>
+
+    <script>
+        function addPhoto() {
+            const input = document.getElementById("photoInput");
+            const gallery = document.getElementById("gallery");
+
+            if (input.files.length === 0) return;
+
+            const file = input.files[0];
+            const imgURL = URL.createObjectURL(file);
+
+            const card = document.createElement("div");
+            card.className = "polaroid";
+
+            card.innerHTML = `
+                <img src="${imgURL}">
+                <p>New Memory ✨</p>
+                <a href="${imgURL}" download="polaroid.jpg" class="download-btn">Download 📥</a>
+            `;
+
+            gallery.appendChild(card);
+
+            input.value = ""; 
+        }
+    </script>
+
+</body>
+</html>
